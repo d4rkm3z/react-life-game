@@ -1,19 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Grid } from './Grid';
 import { Buttons } from './Buttons';
 
 export const Main = () => {
-  const [speed, rows, cols] = [100, 40, 50];
+  let [speed, rows, cols] = [500, 40, 50];
   let intervalId;
 
   // eslint-disable-next-line
   const [generation, setGeneration] = useState(0);
   const [gridFull, setGridFull] = useState(Array(cols).fill().map(() => Array(cols).fill(false)));
-
-  useEffect(() => {
-    seed();
-    playButton();
-  }, []);
 
   const selectBox = (row, col) => {
     let gridCopy = [...gridFull];
@@ -65,15 +60,38 @@ export const Main = () => {
   };
 
   const slow = () => {
+    speed = 1000;
+    playButton();
   };
 
   const fast = () => {
+    speed = 100;
+    playButton();
   };
 
   const clear = () => {
+    setGridFull(Array(cols).fill().map(() => Array(cols).fill(false)));
+    setGeneration(0);
   };
 
-  const gridSize = () => {
+  const gridSize = (size) => {
+    switch (size) {
+      case '1':
+        cols = 20;
+        rows = 10;
+        break;
+      case '2':
+        cols = 50;
+        rows = 30;
+        break;
+      case '3':
+        cols = 70;
+        rows = 50;
+        break;
+      default:
+        break;
+    }
+    clear();
   };
 
   return (<div>

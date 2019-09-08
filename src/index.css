@@ -1,50 +1,59 @@
 body {
-  background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/squares.png)
+    background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/squares.png)
 }
 
 .box {
-  display: inline-block;
-  border: 1px solid black;
-  width: 15px;
-  height: 15px;
-  margin-left: -1px;
-  margin-bottom: -1px;
+    display: inline-block;
+    border: 1px solid black;
+    width: 15px;
+    height: 15px;
+    margin-left: -1px;
+    margin-bottom: -1px;
 }
 
 .off {
-  background-color: lightgray;
+    background-color: lightgray;
 }
 
 .on {
-  background-color: green;
+    background-color: green;
 }
 
 .box:hover {
-  background: #00CCFF;
+    background: #00CCFF;
 }
 
 .center {
-  margin: auto;
-  display: table;
-  margin-top: 10px;
+    margin: auto;
+    display: table;
+    margin-top: 10px;
 }
 
 .grid {
-  width: 150px;
-  line-height: 0;
-  margin: auto;
-  box-shadow: 0px 0px 20px white;
-  margin-top: 20px;
+    width: 150px;
+    line-height: 0;
+    margin: auto;
+    box-shadow: 0px 0px 20px white;
+    margin-top: 20px;
 }
 
 h1, h2, h3, h4 {
-  color: white;
-  margin: auto;
-  text-align: center;
-  width: 50%;
-  margin-top: 10px;
+    color: white;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    margin-top: 10px;
 }
 
 h4 {
-  margin-top: 0px;
+    margin-top: 0px;
+}
+
+.btn-toolbar {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.btn-toolbar button {
+    margin: 13px 12px 12px 10px;
 }
